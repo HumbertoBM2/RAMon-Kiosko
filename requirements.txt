@@ -1,0 +1,54 @@
+# requirements.txt — Kiosko RAMon 2026
+# Instalar con: pip install -r requirements.txt
+
+# ── Core UI & gráficos ─────────────────────────────────────────────────────
+pygame>=2.5.0
+opencv-python>=4.8.0
+numpy>=1.24.0,<2.0.0          # mediapipe requiere NumPy 1.x
+Pillow>=10.0.0                # GIF y procesamiento de imágenes
+
+# ── Detección de manos ─────────────────────────────────────────────────────
+mediapipe==0.10.14              # 0.10.21+ elimina mp.solutions.hands
+
+# ── Voz ───────────────────────────────────────────────────────────────────
+gTTS>=2.4.0                   # Google Text-to-Speech
+pyttsx3>=2.90                 # TTS offline (fallback)
+SpeechRecognition>=3.10.0     # STT Google (fallback)
+sounddevice>=0.4.6            # Captura de micrófono
+scipy>=1.11.0                 # Requerido por sounddevice
+openai-whisper>=20231117      # STT local (recomendado)
+
+# ── Ollama / HTTP ──────────────────────────────────────────────────────────
+requests>=2.32.3              # Versión mínima requerida por azure-iot-device
+
+# ── Azure ─────────────────────────────────────────────────────────────────
+azure-data-tables>=12.5.0     # Table Storage
+azure-iot-device>=2.14.0      # IoT Hub (opcional)
+
+# ── Base de datos local ─────────────────────────────────────────────────────
+mysql-connector-python>=8.2.0
+
+# ── QR Code ────────────────────────────────────────────────────────────────
+qrcode[pil]>=7.4.2
+
+# ── Ambiente / utilidades ───────────────────────────────────────────────────
+python-dotenv>=1.0.0
+playsound==1.3.0              # Fallback reproductor de audio
+
+# ──────────────────────────────────────────────────────────────────────────
+# NOTAS DE INSTALACIÓN:
+#
+# 1. Whisper requiere ffmpeg:
+#    Ubuntu/Debian: sudo apt install ffmpeg
+#    macOS:         brew install ffmpeg
+#
+# 2. MediaPipe puede requerir en algunos sistemas:
+#    pip install mediapipe --extra-index-url https://pypi.ngc.nvidia.com
+#
+# 3. sounddevice requiere PortAudio:
+#    Ubuntu/Debian: sudo apt install portaudio19-dev
+#    macOS:         brew install portaudio
+#
+# 4. pyttsx3 en Linux puede necesitar:
+#    sudo apt install espeak espeak-data libespeak-dev
+# ──────────────────────────────────────────────────────────────────────────
