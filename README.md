@@ -153,6 +153,12 @@ See the Configuration section below for a full description of each variable.
 mysql -u root -p < SQL_Script_For_The_DB.sql
 ```
 
+
+![mano18](Screenshots/edr.jpg)
+
+
+
+
 ### 6. Install and start Ollama
 
 ```bash
