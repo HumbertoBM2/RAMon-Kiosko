@@ -1,6 +1,6 @@
 """
 main.py
-Punto de entrada del Kiosko RAMon — Turismo Monterrey 2026
+Punto de entrada del Kiosko RAMon — Turismo Monterrey 2026 
 """
 import sys
 import os
