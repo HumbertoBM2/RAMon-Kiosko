@@ -363,7 +363,7 @@ You are free to use, copy, modify, merge, publish, distribute, sublicense, and/o
 ![mano2](Screenshots/ss2.png)
 
 
-![mano3](Screenshots/ss3.png)
+
 
 
 ![mano4](Screenshots/ss4.png)
